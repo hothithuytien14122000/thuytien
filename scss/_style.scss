@@ -1,0 +1,260 @@
+
+$primary-color: #ffc87a;
+$text-color: #ffff;
+$text-gray: #c6cad7;
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: $text-color;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@mixin flex(
+  $align: flex-start,
+  $justify: flex-start,
+  $wrap: nowrap,
+  $dir: row
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  flex-direction: $dir;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+// 1440px, 1170
+.wrapper {
+  background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(27, 24, 26, 0.3);
+  margin: 0 auto;
+  max-height: 710px;
+}
+.container {
+  padding-left: 145px;
+  padding-right: 145px;
+}
+.header {
+  background-image: url('../images/aa.png');
+box-shadow:inset 0 0 0 2000px rgba(27, 24, 26, 0.3);
+margin: 0 auto;
+  &__inner {
+    @include flex(center, space-between);
+    height:70px ;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &__menu {
+    &-list {
+      @include flex(center);
+    }
+    &-item {
+      margin-left: 45px;
+      &:last-child {
+        margin-left: 7rem;
+      }
+    }
+    &-link {
+      font-size: 1.6rem;
+      color: $text-color;
+      transition: color 0.25s linear, border 0.25s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+.banner {
+  margin-left: 145px;
+  font-size: 16px;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
+  margin: 0 auto;
+&_main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 80px;
+}
+&_content{
+  padding-left: 145px;
+}
+  &__sigup{
+    margin-left: 1100px;
+    margin-right: 150px;
+  }
+  &__menu{
+    &:hover {
+      color: $primary-color;
+    }
+  font-size: 20px;
+  color: $text-color;
+  transition: color 0.25s linear, border 0.25s linear;
+}
+  &__text {
+    max-width: 500px;
+    padding-top: 35px;
+    color: #fdfdfd61;
+  }
+  &__hr{
+    margin-top: 35px;
+    width:75px ;
+    size: 4px;
+background-color: white;
+  }
+  &__heading {
+    font-size: 40px;
+    max-width: 623px;
+    padding-top: 35px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  &__buttons {
+    display: flex;
+    align-items: stretch;
+    .btn {
+      margin: 0 1rem;
+    }
+
+  }
+}
+.btn {
+  &:hover {
+    color: $primary-color;
+  }
+  margin-top: 35px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $text-color;
+  padding: 11px 25px;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  &--border {
+    border: 2px solid currentColor;
+    width: 130px;
+  }
+  &--primary {
+    background-color: $primary-color;
+    &.has-shadow {
+      box-shadow: 0 10px 35px -5px $primary-color;
+    }
+  }
+}
+.signup {
+  max-width: 540px;
+  padding-right: 145px;
+  padding-top: 51px;
+}
+h2.signup-heading.hea {
+  padding: 14px;
+  text-align: center;
+  max-width: 474px;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #ff9b51;
+}
+h2.signup-heading.heading {
+  padding: 14px;
+  max-width: 474px;
+  font-size: 30px;
+  color: black;
+  background-color: #f5f5f5;
+  padding-left: 50px;
+}
+.signup-heading {
+  border: 1px solid #00000000;
+  grid-column: 6/9;
+  grid-row: 3;
+  /* height: 100px; */
+  width: 475px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  position: relative;
+  border-radius: 4px;
+  /* box-shadow: 0px 0px 14px 0px grey; */
+  background-color: #ffffff;
+}
+.signup-heading .user-box {
+  position: relative;
+  max-width: 400px;
+  margin-left: 35px;
+}
+.signup-heading.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  outline: none;
+  background: transparent;
+}
+.signup-heading .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #cfcfcf;
+  pointer-events: none;
+  transition: .5s;
+}
+.brand{
+  margin-bottom: 50px;
+
+}
+.brard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 60px;
+font-size: 50px;
+}
+.brard-bar {
+  display: flex;
+  padding-top: 20px;
+  gap: 0 169px;
+  justify-content: space-between;
+}
+section.brard {
+  max-width: 1920px;
+  max-height: 115px;
+  padding-bottom: 25px;
+}
+h4 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.brard-text {
+  font-size: 20px;
+  color: black;
+  max-width: 365px;
+}

@@ -1,0 +1,24 @@
+section.Standard {
+    background-color: #f5f5f5;
+    max-width: 1920px;
+}
+.Standard-container {
+    display: flex;
+    gap: 0 215px;
+    padding-top: 95px;
+    padding-bottom: 100px;
+    justify-content: space-between;
+}
+.contain__1 {
+    color: black;
+}
+
+img.contain_img {
+    margin-top: 35 px;
+    width: 75 px;
+    display: block;
+    /* margin-left: auto; */
+    margin-right: auto;
+    padding-top: 20px;
+}
+
